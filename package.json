@@ -1,0 +1,18 @@
+{
+  "name": "bernoulli",
+  "version": "0.0.0",
+  "description": "A NodeJS package for Bernoulli",
+  "main": "index.js",
+  "dependencies": {
+    "request": "~2.33.0"
+  },
+  "devDependencies": {
+    "nock": "~0.27.2",
+    "whiskey": "~0.8.4"
+  },
+  "scripts": {
+    "test": "whiskey --tests tests.js"
+  },
+  "author": "Joe Gasiorek",
+  "license": "MIT"
+}
