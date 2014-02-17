@@ -14,5 +14,9 @@
     "test": "whiskey --tests tests.js"
   },
   "author": "Joe Gasiorek",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/joeyg/bernoulli-node.git"
+  }
 }
