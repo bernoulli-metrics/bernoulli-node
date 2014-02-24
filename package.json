@@ -1,6 +1,6 @@
 {
   "name": "bernoulli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A NodeJS package for Bernoulli",
   "main": "index.js",
   "dependencies": {
@@ -17,6 +17,6 @@
   "license": "MIT",
   "repository": {
       "type": "git",
-      "url": "https://github.com/joeyg/bernoulli-node.git"
+      "url": "https://github.com/bernoulli-metrics/bernoulli-node.git"
   }
 }
