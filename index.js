@@ -1,6 +1,6 @@
 var request = require('request');
 
-var BASE_URL = "http://localhost:5000/client/api/experiments/";
+var BASE_URL = "https://bernoulli.herokuapp.com/client/api/experiments/";
 
 var getExperiments = function(options, successCallback, failureCallback) {
     if (!options.clientId) {
