@@ -3,8 +3,13 @@ var request = require('request');
 var BASE_URL = "https://bernoulli.herokuapp.com/client/api/experiments/";
 
 var getExperiments = function(options, successCallback, failureCallback) {
-    if (!options.clientId) {
-        throw new Error("clientId option not passed in");
+    var clientId = options.clientId;
+    if (!clientId) {
+
+        clientId = process.env.BERNOULLI_CLIENT_ID;
+        if (!clientId) {
+            throw new Error("clientId option not passed in");
+        }
     }
 
     var experimentIds = options.experimentIds;
