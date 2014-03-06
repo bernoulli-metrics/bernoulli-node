@@ -37,11 +37,20 @@ var getExperiments = function(options, successCallback, failureCallback) {
 };
 
 var goalAttained = function(options, callback) {
+    var clientId = options.clientId;
+    if (!clientId) {
+
+        clientId = process.env.BERNOULLI_CLIENT_ID;
+        if (!clientId) {
+            throw new Error("clientId option not passed in");
+        }
+    }
+
     request.post({
         url: BASE_URL,
         json: true,
         form: {
-            clientId: options.clientId,
+            clientId: clientId,
             experimentId: options.experimentId,
             userId: options.userId
         }
