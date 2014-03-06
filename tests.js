@@ -17,7 +17,7 @@ exports.test_get_experiments_no_client_id = function(test, assert) {
 };
 
 exports.test_get_experiments_success = function(test, assert) {
-    nock('http://localhost:5000')
+    nock('https://bernoulli.herokuapp.com')
         .filteringPath(function(path) {
             return '/';
         })
@@ -42,7 +42,7 @@ exports.test_get_experiments_success = function(test, assert) {
 };
 
 exports.test_get_experiments_failure = function(test, assert) {
-    nock('http://localhost:5000')
+    nock('https://bernoulli.herokuapp.com')
         .filteringPath(function(path) {
             return '/';
         })
@@ -63,11 +63,11 @@ exports.test_get_experiments_failure = function(test, assert) {
     });
 };
 
-exports.test_goal_ttained = function(test, assert) {
-    nock('http://localhost:5000')
+exports.test_goal_attained = function(test, assert) {
+    nock('https://bernoulli.herokuapp.com')
         .post('/client/api/experiments/')
         .reply(200, {
-            status: 'ok',
+            status:  'ok',
             value: true
         });
 
