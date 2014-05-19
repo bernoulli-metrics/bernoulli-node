@@ -21,7 +21,7 @@ var getExperiments = function(options, successCallback, failureCallback) {
         url: BASE_URL,
         json: true,
         qs: {
-            clientId: options.clientId,
+            clientId: clientId,
             experimentIds: experimentIds,
             userId: options.userId,
             bucketIfNecessary: options.bucketIfNecessary || true,
